@@ -1,0 +1,19 @@
+[project]
+name = "bcn-rainfall-api"
+version = "1.0.0"
+description = "API exposing rainfall data from the city of Barcelona, Catalunya."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcn-rainfall-core~=1.0.2",
+    "coverage~=7.6.9",
+    "fastapi~=0.115.5",
+    "pre-commit~=4.0.1",
+    "pydantic~=2.8.2",
+    "pytest~=8.3.4",
+    "pyyaml~=6.0.2",
+    "starlette~=0.41.3",
+    "uvicorn~=0.32.1",
+]
+authors = [{name = "Paul Charles", email = "paul.charles@tutanota.com"}]
+
