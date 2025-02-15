@@ -1,17 +1,13 @@
 #!/usr/bin/env python
 
 """
-CLI to run FastAPI or Flask servers.
+Script to run FastAPI server with Uvicorn.
 """
 
 import uvicorn  # type: ignore
 
 
 def run():
-    """
-    Run FastAPI with Uvicorn.
-    """
-
     from bcn_rainfall_api.config import Config
 
     uvicorn.run(
