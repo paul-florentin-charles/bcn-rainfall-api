@@ -19,7 +19,7 @@ API build with FastAPI to expose rainfall data from the city of Barcelona, Catal
 
 ```commandline
 git clone https://github.com/paul-florentin-charles/bcn-rainfall-api.git
-cd bcn-rainfall-models
+cd bcn-rainfall-api
 pip install uv
 uv sync
 uv run run.py
