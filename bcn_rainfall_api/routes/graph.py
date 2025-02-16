@@ -41,7 +41,7 @@ def get_rainfall_by_year_as_plotly_json(
         raise HTTPException(
             status_code=400,
             detail=f"Data has not been successfully plotted, "
-            f"check if your data has both '{Label.RAINFALL.value}' and '{Label.YEAR.value}' columns",
+            f"check if your data has both '{Label.RAINFALL.value}' and '{Label.YEAR.value}' columns.",
         )
 
     return figure.to_json()

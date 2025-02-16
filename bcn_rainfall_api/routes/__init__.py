@@ -11,7 +11,7 @@ from starlette.responses import JSONResponse, StreamingResponse
 
 from bcn_rainfall_api.utils import RainfallModel
 
-all_rainfall = Rainfall.from_config(from_file=True)
+all_rainfall = Rainfall.from_config()
 
 
 MIN_YEAR_AVAILABLE = all_rainfall.starting_year
