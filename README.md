@@ -8,7 +8,6 @@
 
 API build with FastAPI to expose rainfall data from the city of Barcelona, Catalunya.
 
-
 ### Requirements
 
 - Python 3.12
@@ -16,14 +15,31 @@ API build with FastAPI to expose rainfall data from the city of Barcelona, Catal
 
 ### Get started
 
+#### Build
 
 ```commandline
 git clone https://github.com/paul-florentin-charles/bcn-rainfall-api.git
 cd bcn-rainfall-api
 pip install uv
 uv sync
+```
+
+#### Run
+
+With default settings retrieved from `config.yml`
+
+```commandline
 uv run run.py
 ```
+
+With your own server settings
+
+```commandline
+uv run uvicorn bcn_rainfall_api.app:fastapi_app --host 0.0.0.0 --port 8080 --reload
+```
+
+:warning: Make sure that `bcn_rainfall_api.app` is the correct path to app object and that `fastapi_app` is the correct
+app instance name.
 
 ### Tests & Coverage
 
