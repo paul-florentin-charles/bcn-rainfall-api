@@ -5,7 +5,7 @@ description = "API exposing rainfall data from the city of Barcelona, Catalunya.
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "bcn-rainfall-core~=1.0.2",
+    "bcn-rainfall-core~=1.0.3",
     "coverage~=7.6.9",
     "fastapi~=0.115.5",
     "httpx~=0.28.1",
