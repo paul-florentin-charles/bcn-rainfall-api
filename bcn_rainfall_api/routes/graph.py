@@ -21,6 +21,7 @@ def get_rainfall_by_year_as_plotly_json(
     season: Season | None = None,
     plot_average: bool = False,
     plot_linear_regression: bool = False,
+    kmeans_cluster_count: int | None = None,
 ):
     if end_year is None:
         end_year = MAX_YEAR_AVAILABLE
@@ -36,6 +37,7 @@ def get_rainfall_by_year_as_plotly_json(
         season=season,
         plot_average=plot_average,
         plot_linear_regression=plot_linear_regression,
+        kmeans_cluster_count=kmeans_cluster_count,
     )
     if figure is None:
         raise HTTPException(

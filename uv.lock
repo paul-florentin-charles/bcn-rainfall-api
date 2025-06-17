@@ -47,7 +47,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "bcn-rainfall-core", specifier = "~=1.0.3" },
+    { name = "bcn-rainfall-core", specifier = "~=1.0.4" },
     { name = "coverage", specifier = "~=7.6.9" },
     { name = "fastapi", specifier = "~=0.115.5" },
     { name = "httpx", specifier = "~=0.28.1" },
@@ -61,7 +61,7 @@ requires-dist = [
 
 [[package]]
 name = "bcn-rainfall-core"
-version = "1.0.3"
+version = "1.0.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "coverage" },
@@ -75,9 +75,9 @@ dependencies = [
     { name = "scikit-learn" },
     { name = "scipy" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6d/e1/52649fde5921be2bc5f95ecbc1322c3280db24e6b2d2443e7f5754b8fb4d/bcn_rainfall_core-1.0.3.tar.gz", hash = "sha256:929b7100795892bb7600e956269eb494b358aaf14bb28378ee77bd1f06520655", size = 53361 }
+sdist = { url = "https://files.pythonhosted.org/packages/ef/07/b5daf6747d1183fbbd8dcdf529e2757560f7d01d00685f1d3bc713069ac0/bcn_rainfall_core-1.0.4.tar.gz", hash = "sha256:e5fa86b8dab769ac57be15ce48b0e9f8ac42410204b5bfdeafe318b08204cad0", size = 52348 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a9/d7/7584f26a402935bdd3101bb8fd6a8ba9e2037061420c6d2fb5065b182e64/bcn_rainfall_core-1.0.3-py3-none-any.whl", hash = "sha256:bdd2f08d8d8af8aa027579670f1345f965af3a2a5c0d60ece0353df9fdce00dd", size = 21081 },
+    { url = "https://files.pythonhosted.org/packages/23/96/25fdab8bb0a1c2312940903567c8660e989ac1e33c2628583ff9eefe825d/bcn_rainfall_core-1.0.4-py3-none-any.whl", hash = "sha256:fcd3a4de53fefc6ca1bf8efb822419accfa3e1741396f9fc51c429b757e9959f", size = 20172 },
 ]
 
 [[package]]
