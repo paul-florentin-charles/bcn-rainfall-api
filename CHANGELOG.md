@@ -1,6 +1,11 @@
 ## Changelog
 
 ### v1.0.1
+_18/06/2025_
+
+- Update `/graph/rainfall_by_year` route to use optional `kmeans_cluster_count` query param.
+
+### v1.0.1
 _16/02/2025_
 
 - Add some preliminary tests on FastAPI app object.
