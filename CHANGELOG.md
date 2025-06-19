@@ -1,6 +1,11 @@
 ## Changelog
 
-### v1.0.1
+### v1.0.3
+_19/06/2025_
+
+- Add `/graph/standard_deviations` route.
+
+### v1.0.2
 _18/06/2025_
 
 - Update `/graph/rainfall_by_year` route to use optional `kmeans_cluster_count` query param.

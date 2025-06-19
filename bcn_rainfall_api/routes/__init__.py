@@ -11,7 +11,7 @@ from starlette.responses import JSONResponse, StreamingResponse
 
 from bcn_rainfall_api.utils import RainfallModel
 
-all_rainfall = Rainfall.from_config(from_file=True)
+all_rainfall = Rainfall.from_config()
 
 
 MIN_YEAR_AVAILABLE = all_rainfall.starting_year
@@ -44,6 +44,7 @@ def get_endpoint_to_api_route_specs() -> dict[Callable[..., Any], APIRouteSpecs]
         get_rainfall_by_year_as_plotly_json,
         get_rainfall_linreg_slopes_as_plotly_json,
         get_relative_distances_to_normal_as_plotly_json,
+        get_standard_deviations_as_plotly_json,
     )
     from bcn_rainfall_api.routes.rainfall import (
         get_rainfall_average,
@@ -132,6 +133,12 @@ def get_endpoint_to_api_route_specs() -> dict[Callable[..., Any], APIRouteSpecs]
         get_relative_distances_to_normal_as_plotly_json: APIRouteSpecs(
             path="/graph/relative_distances_to_normal",
             summary="Retrieve monthly or seasonal relative distances to normal (%) of data as a PNG or as a JSON.",
+            description=f"Time mode should be either '{TimeMode.MONTHLY.value}' or '{TimeMode.SEASONAL.value}'.<br>"
+            f"If no ending year is precised, most recent year available is taken: {MAX_YEAR_AVAILABLE}.",
+        ),
+        get_standard_deviations_as_plotly_json: APIRouteSpecs(
+            path="/graph/standard_deviations",
+            summary="Retrieve monthly or seasonal standard deviations (mm) of data as a PNG or as a JSON.",
             description=f"Time mode should be either '{TimeMode.MONTHLY.value}' or '{TimeMode.SEASONAL.value}'.<br>"
             f"If no ending year is precised, most recent year available is taken: {MAX_YEAR_AVAILABLE}.",
         ),
