@@ -157,6 +157,7 @@ def get_percentage_of_years_above_and_below_normal_as_plotly_json(
     | None = None,
     month: Month | None = None,
     season: Season | None = None,
+    percentages_of_normal: str = "0,80,120,inf",
 ):
     if end_year is None:
         end_year = MAX_YEAR_AVAILABLE
@@ -171,4 +172,7 @@ def get_percentage_of_years_above_and_below_normal_as_plotly_json(
         end_year=end_year,
         month=month,
         season=season,
+        percentages_of_normal=tuple(
+            float(percent) for percent in percentages_of_normal.split(",") if percent
+        ),
     ).to_json()
