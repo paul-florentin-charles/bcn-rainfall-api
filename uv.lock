@@ -47,7 +47,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "bcn-rainfall-core", git = "https://github.com/paul-florentin-charles/bcn-rainfall-core.git?rev=v1.0.6" },
+    { name = "bcn-rainfall-core", git = "https://github.com/paul-florentin-charles/bcn-rainfall-core.git?rev=v1.0.7" },
     { name = "coverage", specifier = "~=7.6.9" },
     { name = "fastapi", specifier = "~=0.115.5" },
     { name = "httpx", specifier = "~=0.28.1" },
@@ -61,8 +61,8 @@ requires-dist = [
 
 [[package]]
 name = "bcn-rainfall-core"
-version = "1.0.6"
-source = { git = "https://github.com/paul-florentin-charles/bcn-rainfall-core.git?rev=v1.0.6#de85a15094de0a20feb3e9e38390635036d391ce" }
+version = "1.0.7"
+source = { git = "https://github.com/paul-florentin-charles/bcn-rainfall-core.git?rev=v1.0.7#c812a38627e9122bef5c8207dd95d520eb0a79fd" }
 dependencies = [
     { name = "coverage" },
     { name = "numpy" },
