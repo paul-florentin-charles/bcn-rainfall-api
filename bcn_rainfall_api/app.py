@@ -6,20 +6,31 @@ from typing import Any, Callable
 
 from fastapi import FastAPI
 
+from bcn_rainfall_api.routes import ROUTER_BY_NAME
+
 
 class FastAPPI(FastAPI):
     """Overrides FastAPI class to initiate our own app."""
 
     def __init__(self, **kwargs):
-        from bcn_rainfall_api.routes import get_endpoint_to_api_route_specs
+        from bcn_rainfall_api.routes import (
+            get_endpoint_to_api_route_specs_by_router_name,
+        )
 
         super().__init__(**kwargs)
 
-        for endpoint, api_route_specs in get_endpoint_to_api_route_specs().items():
-            self.add_api_route(
-                endpoint=endpoint,
-                **api_route_specs.model_dump(),
-            )
+        for (
+            router_name,
+            endpoint_to_api_route_specs,
+        ) in get_endpoint_to_api_route_specs_by_router_name().items():
+            router = ROUTER_BY_NAME[router_name]
+            for endpoint, api_route_specs in endpoint_to_api_route_specs.items():
+                router.add_api_route(
+                    endpoint=endpoint,
+                    **api_route_specs.model_dump(),
+                )
+
+            self.include_router(router)
 
     @classmethod
     def from_config(cls, path="config.yml"):

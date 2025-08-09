@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.0.4
+_09/08/2025_
+
+- Use `APIRouter` object to split up routes management.
+
 ### v1.0.3
 _19/06/2025_
 

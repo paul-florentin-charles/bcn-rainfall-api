@@ -30,7 +30,7 @@ wheels = [
 
 [[package]]
 name = "bcn-rainfall-api"
-version = "1.0.3"
+version = "1.0.4"
 source = { virtual = "." }
 dependencies = [
     { name = "bcn-rainfall-core" },
