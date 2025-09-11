@@ -123,31 +123,31 @@ def get_endpoint_to_api_route_specs_by_router_name() -> dict[
     endpoint_to_graph_api_route_specs: dict[Callable[..., Any], APIRouteSpecs] = {
         get_rainfall_by_year_as_plotly_json: APIRouteSpecs(
             path="/rainfall_by_year",
-            summary="Retrieve rainfall by year as a PNG or as a JSON.",
+            summary="Retrieve rainfall by year as a JSON.",
             description="Could either be for rainfall upon a whole year, a specific month or a given season.<br>"
             f"If no ending year is precised, most recent year available is taken: {MAX_YEAR_AVAILABLE}.",
         ),
         get_rainfall_averages_as_plotly_json: APIRouteSpecs(
             path="/rainfall_averages",
-            summary="Retrieve rainfall monthly or seasonal averages of data as a PNG or as a JSON.",
+            summary="Retrieve rainfall monthly or seasonal averages of data as a JSON.",
             description=f"Time mode should be either '{TimeMode.MONTHLY.value}' or '{TimeMode.SEASONAL.value}'.<br>"
             f"If no ending year is precised, most recent year available is taken: {MAX_YEAR_AVAILABLE}.",
         ),
         get_rainfall_linreg_slopes_as_plotly_json: APIRouteSpecs(
             path="/rainfall_linreg_slopes",
-            summary="Retrieve rainfall monthly or seasonal linear regression slopes of data as a PNG or as a JSON.",
+            summary="Retrieve rainfall monthly or seasonal linear regression slopes of data as a JSON.",
             description=f"Time mode should be either '{TimeMode.MONTHLY.value}' or '{TimeMode.SEASONAL.value}'.<br>"
             f"If no ending year is precised, most recent year available is taken: {MAX_YEAR_AVAILABLE}.",
         ),
         get_relative_distances_to_normal_as_plotly_json: APIRouteSpecs(
             path="/relative_distances_to_normal",
-            summary="Retrieve monthly or seasonal relative distances to normal (%) of data as a PNG or as a JSON.",
+            summary="Retrieve monthly or seasonal relative distances to normal (%) of data as a JSON.",
             description=f"Time mode should be either '{TimeMode.MONTHLY.value}' or '{TimeMode.SEASONAL.value}'.<br>"
             f"If no ending year is precised, most recent year available is taken: {MAX_YEAR_AVAILABLE}.",
         ),
         get_standard_deviations_as_plotly_json: APIRouteSpecs(
             path="/standard_deviations",
-            summary="Retrieve monthly or seasonal standard deviations (mm) of data as a PNG or as a JSON.",
+            summary="Retrieve monthly or seasonal standard deviations (mm) of data as a JSON.",
             description=f"Time mode should be either '{TimeMode.MONTHLY.value}' or '{TimeMode.SEASONAL.value}'.<br>"
             f"If no ending year is precised, most recent year available is taken: {MAX_YEAR_AVAILABLE}.",
         ),
